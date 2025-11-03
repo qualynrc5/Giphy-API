@@ -1,1 +1,63 @@
-/* Add any custom CSS stylings you want here */
+/* 🌈 Rainbow Neon Glow Theme */
+
+body {
+  background-color: #000; /* black */
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Title Glow */
+h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 8px white; }
+  to { text-shadow: 0 0 16px violet, 0 0 20px cyan; }
+}
+
+/* Search Box */
+#search-input {
+  background-color: black;
+  color: white;
+  border: 2px solid cyan;
+  border-radius: 10px;
+}
+
+#search-input::placeholder {
+  color: #aaa;
+}
+
+/* Button Rainbow Glow */
+#fetch-gif-btn {
+  background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+  border: none;
+  font-weight: bold;
+  text-shadow: 0 0 5px black;
+  border-radius: 12px;
+  padding: 10px 20px;
+  transition: transform .2s ease;
+}
+
+#fetch-gif-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px cyan, 0 0 18px magenta;
+}
+
+/* GIF Glow Boxes */
+#gif-container img {
+  border-radius: 10px;
+  box-shadow: 0 0 10px cyan, 0 0 15px magenta;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+#gif-container img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 20px lime, 0 0 30px magenta;
+}
